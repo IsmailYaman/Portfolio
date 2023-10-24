@@ -4,9 +4,9 @@ const Banner2 = () => {
     return (
         // Make this responsive
         // <div className="h-screen bg-no-repeat bg-cover bg-center bg-[url('/img/purple.png')] bg-cover">
-        <div className="h-screen">
-            <Image src="/img/ccchaos.svg" layout="fill" objectFit="cover" alt={"background"} />
-            <div className="md:w-1/2 sm:w-full right-0 flex h-screen absolute justify-center flex-col ">
+        <div className="h-screen relative">
+            <Image src="/img/ccchaos.svg" layout="fill" objectFit="cover" alt="background" />
+            <div className="md:w-1/2 sm:w-full right-0 flex h-screen absolute justify-center flex-col">
                 <div className="mx-auto px-8">
                     <h1 className="text-4xl font-bold mb-4">Ismail Kayadelen</h1>
                     <h2 className="font-light mb-4">Web Development & Web Design</h2>
@@ -19,6 +19,22 @@ const Banner2 = () => {
                         <span className="relative">Let's work together!</span>
                     </a>
                 </div>
+            </div>
+            <div className=" absolute inset-x-0 bottom-12 flex items-center justify-center z-50">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 motion-safe:animate-bounce"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+                    />
+                </svg>
             </div>
         </div>
     );

@@ -11,6 +11,9 @@ module.exports = {
             backgroundImage: {
                 "purple-bg": "url('/public/img/purple.png')",
             },
+            animation: {
+                'bounce': 'bounce 3s linear infinite',
+              }
         },
     },
     daisyui: {
