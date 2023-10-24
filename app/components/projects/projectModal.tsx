@@ -15,30 +15,30 @@ interface ProjectModalProps {
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     return (
         <dialog id="projectModal" className="modal bg-black bg-opacity-50 backdrop-blur-sm ease-in-out" open>
-            <div className="modal-box flex flex-col md:flex-row max-w-6xl">
+            <div className="modal-box flex flex-col lg:flex-row max-w-6xl p-10">
                 <form method="dialog">
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-10" onClick={onClose}>
                         ✕
                     </button>
                 </form>
 
-                <div className="md:w-2/5 relative">
-                    <div className="w-full h-96 md:h-auto md:w-auto">
+                <div className="lg:w-3/5 relative">
+                    <div className="w-full h-96">
                         <Image
                             src={project.image}
                             quality={100}
                             alt={project.title}
                             layout="fill"
                             objectFit="cover"
-                            className="object-center"
+                            className="object-center rounded-xl"
                         />
                     </div>
                 </div>
 
-                <div className="md:ml-5 md:w-3/5">
+                <div className="lg:ml-5 lg:w-2/5 justify-between">
                     <h2>{project.title}</h2>
                     {project.description.map((desc, index) => (
-                        <div key={index} className="mb-5 justifty-between">
+                        <div key={index} className="mb-5">
                             <p className="mb-4">{desc.body1}</p>
                             {desc.body2 && <p className="mb-4">{desc.body2}</p>}
                         </div>
