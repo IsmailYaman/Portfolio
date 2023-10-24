@@ -5,11 +5,13 @@ import About from "./components/about";
 import RandomCatImage from "./components/randomCatImage";
 import Projects from "./components/projects/projects";
 import Experience from "./components/experience/experience";
+import BackToTopButton from "./components/backToTop";
 
 const Home = () => {
     return (
         <>
           {/* <Banner/> */}
+          <BackToTopButton />
           <Banner2/>
           <About />
           <Projects />
