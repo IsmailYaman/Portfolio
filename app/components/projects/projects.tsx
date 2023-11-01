@@ -22,19 +22,22 @@ const Projects = () => {
     };
 
     return (
-    <div className="pb-36 bg-base-100">
-        <div className="sm:container sm:mx-auto mx-4 ">
-            <h1 className="mb-4">Projects</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {projects.map((project) => (
-                    <div key={project.id}>
-                        <div onClick={() => openModal(project.id)} className="cursor-pointer">
-                            <ProjectCard project={project} />
-                        </div>
-                    </div>
-                ))}
-            </div>
+<div className="pb-36 bg-base-100">
+    <div className="sm:container sm:mx-auto mx-4 ">
+        <div className="relative inline-block mb-4">
+            <h1><span className="relative z-10 bg-gradient-to-br from-pink-700 via-purple-700 to-blue-400 text-transparent h-full bg-clip-text text-5xl leading-loose font-black">Projects</span> I've worked on</h1>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {projects.map((project) => (
+                <div key={project.id}>
+                    <div onClick={() => openModal(project.id)} className="cursor-pointer">
+                        <ProjectCard project={project} />
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+
 
         {selectedProject !== null && (
             <ProjectModal project={projects[selectedProject - 1]} onClose={closeModal} />
